@@ -1,4 +1,6 @@
-export const profiles = [
+import { EmployeeProfile } from "./types/employee-profile";
+
+export const profiles: EmployeeProfile[] = [
   {
     id: 1,
     name: "John Doe",
@@ -9,16 +11,20 @@ export const profiles = [
     email: "john@example.com",
     linkedinUrl: "#",
     githubUrl: "#",
+    displayOrder: 1,
+    isActive: true,
   },
   {
     id: 2,
     name: "Jane Smith",
     role: "UI/UX Designer",
-    bio: "Creative designer focused on simple, accessible, and user-friendly digital experiences.",
-    skills: ["Figma", "Design Systems", "Tailwind CSS"],
+    bio: "Creative designer focused on simple and user-friendly experiences.",
+    skills: ["Figma", "Tailwind CSS"],
     photoUrl: "",
     email: "jane@example.com",
     linkedinUrl: "#",
     githubUrl: "#",
+    displayOrder: 2,
+    isActive: true,
   },
 ];

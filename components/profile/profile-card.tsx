@@ -1,19 +1,9 @@
 import { ProfileDetails } from "./profile-details";
 
-type Profile = {
-  id: number;
-  name: string;
-  role: string;
-  bio: string;
-  skills: string[];
-  photoUrl: string;
-  email: string;
-  linkedinUrl: string;
-  githubUrl: string;
-};
+import { EmployeeProfile } from "@/lib/types/employee-profile";
 
 type ProfileCardProps = {
-  profile: Profile;
+  profile: EmployeeProfile;
 };
 
 export function ProfileCard({ profile }: ProfileCardProps) {
