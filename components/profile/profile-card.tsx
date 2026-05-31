@@ -1,3 +1,5 @@
+import { ProfileDetails } from "./profile-details";
+
 type Profile = {
   id: number;
   name: string;
@@ -21,21 +23,12 @@ export function ProfileCard({ profile }: ProfileCardProps) {
         {profile.name.charAt(0)}
       </div>
 
-      <h2 className="text-xl font-semibold text-gray-900">{profile.name}</h2>
-      <p className="mt-1 text-sm font-medium text-blue-600">{profile.role}</p>
-
-      <p className="mt-4 text-sm leading-6 text-gray-600">{profile.bio}</p>
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        {profile.skills.map((skill) => (
-          <span
-            key={skill}
-            className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700"
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
+      <ProfileDetails
+        name={profile.name}
+        role={profile.role}
+        bio={profile.bio}
+        skills={profile.skills}
+      />
 
       <div className="mt-5 flex gap-4 text-sm">
         <a href={`mailto:${profile.email}`} className="text-blue-600 hover:underline">
