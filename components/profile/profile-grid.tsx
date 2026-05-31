@@ -1,0 +1,27 @@
+import { ProfileCard } from "./profile-card";
+
+type Profile = {
+  id: number;
+  name: string;
+  role: string;
+  bio: string;
+  skills: string[];
+  photoUrl: string;
+  email: string;
+  linkedinUrl: string;
+  githubUrl: string;
+};
+
+type ProfileGridProps = {
+  profiles: Profile[];
+};
+
+export function ProfileGrid({ profiles }: ProfileGridProps) {
+  return (
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {profiles.map((profile) => (
+        <ProfileCard key={profile.id} profile={profile} />
+      ))}
+    </div>
+  );
+}
