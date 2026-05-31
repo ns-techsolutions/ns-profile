@@ -1,19 +1,9 @@
 import { ProfileCard } from "./profile-card";
 
-type Profile = {
-  id: number;
-  name: string;
-  role: string;
-  bio: string;
-  skills: string[];
-  photoUrl: string;
-  email: string;
-  linkedinUrl: string;
-  githubUrl: string;
-};
+import { EmployeeProfile } from "@/lib/types/employee-profile";
 
 type ProfileGridProps = {
-  profiles: Profile[];
+  profiles: EmployeeProfile[];
 };
 
 export function ProfileGrid({ profiles }: ProfileGridProps) {
